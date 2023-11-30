@@ -1,0 +1,6 @@
+@JoseLuisValderruten_HostAddress = http://localhost:5271
+
+GET {{JoseLuisValderruten_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

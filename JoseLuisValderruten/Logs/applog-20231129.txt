@@ -1,0 +1,98 @@
+2023-11-29 20:59:44.377 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-29 20:59:44.677 -05:00 [DBG] Hosting starting
+2023-11-29 20:59:44.813 -05:00 [INF] User profile is available. Using 'C:\Users\sofia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-29 20:59:44.841 -05:00 [DBG] Reading data from file 'C:\Users\sofia\AppData\Local\ASP.NET\DataProtection-Keys\key-0d4453a9-0239-4f92-82df-b41d8a281aec.xml'.
+2023-11-29 20:59:44.877 -05:00 [DBG] Found key {0d4453a9-0239-4f92-82df-b41d8a281aec}.
+2023-11-29 20:59:44.928 -05:00 [DBG] Considering key {0d4453a9-0239-4f92-82df-b41d8a281aec} with expiration date 2024-02-27 23:13:32Z as default key.
+2023-11-29 20:59:44.953 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-29 20:59:44.964 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-11-29 20:59:44.970 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-29 20:59:44.998 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-11-29 20:59:45.005 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-11-29 20:59:45.012 -05:00 [DBG] Using key {0d4453a9-0239-4f92-82df-b41d8a281aec} as the default key.
+2023-11-29 20:59:45.014 -05:00 [DBG] Key ring with default key {0d4453a9-0239-4f92-82df-b41d8a281aec} was loaded during application startup.
+2023-11-29 20:59:46.565 -05:00 [INF] Now listening on: http://localhost:5271
+2023-11-29 20:59:46.566 -05:00 [DBG] Loaded hosting startup assembly JoseLuisValderruten
+2023-11-29 20:59:46.566 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-11-29 20:59:46.566 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-11-29 20:59:46.566 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-29 20:59:46.567 -05:00 [INF] Hosting environment: Development
+2023-11-29 20:59:46.567 -05:00 [INF] Content root path: C:\Users\sofia\source\repos\JoseLuisValderruten\JoseLuisValderruten
+2023-11-29 20:59:46.568 -05:00 [DBG] Hosting started
+2023-11-29 20:59:46.603 -05:00 [DBG] Connection id "0HMVH903LAGD1" received FIN.
+2023-11-29 20:59:46.603 -05:00 [DBG] Connection id "0HMVH903LAGD2" received FIN.
+2023-11-29 20:59:46.634 -05:00 [DBG] Connection id "0HMVH903LAGD1" accepted.
+2023-11-29 20:59:46.635 -05:00 [DBG] Connection id "0HMVH903LAGD2" accepted.
+2023-11-29 20:59:46.637 -05:00 [DBG] Connection id "0HMVH903LAGD2" started.
+2023-11-29 20:59:46.637 -05:00 [DBG] Connection id "0HMVH903LAGD1" started.
+2023-11-29 20:59:46.655 -05:00 [DBG] Connection id "0HMVH903LAGD1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-29 20:59:46.655 -05:00 [DBG] Connection id "0HMVH903LAGD2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-29 20:59:46.661 -05:00 [DBG] Connection id "0HMVH903LAGD1" disconnecting.
+2023-11-29 20:59:46.661 -05:00 [DBG] Connection id "0HMVH903LAGD2" disconnecting.
+2023-11-29 20:59:46.671 -05:00 [DBG] Connection id "0HMVH903LAGD2" stopped.
+2023-11-29 20:59:46.671 -05:00 [DBG] Connection id "0HMVH903LAGD1" stopped.
+2023-11-29 20:59:49.040 -05:00 [DBG] Connection id "0HMVH903LAGD3" accepted.
+2023-11-29 20:59:49.046 -05:00 [DBG] Connection id "0HMVH903LAGD4" accepted.
+2023-11-29 20:59:49.051 -05:00 [DBG] Connection id "0HMVH903LAGD3" started.
+2023-11-29 20:59:49.078 -05:00 [DBG] Connection id "0HMVH903LAGD4" started.
+2023-11-29 20:59:49.263 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5271/swagger/index.html - null null
+2023-11-29 20:59:49.652 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-29 20:59:49.723 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-29 20:59:49.725 -05:00 [DBG] Request did not match any endpoints
+2023-11-29 20:59:50.110 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-11-29 20:59:50.206 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 444.4691 ms
+2023-11-29 20:59:50.218 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-11-29 20:59:50.225 -05:00 [DBG] Connection id "0HMVH903LAGD3" completed keep alive response.
+2023-11-29 20:59:50.235 -05:00 [DBG] Connection id "0HMVH903LAGD5" accepted.
+2023-11-29 20:59:50.241 -05:00 [DBG] Connection id "0HMVH903LAGD5" started.
+2023-11-29 20:59:50.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5271/_vs/browserLink - null null
+2023-11-29 20:59:50.246 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5271/swagger/index.html - 200 null text/html;charset=utf-8 1012.8585ms
+2023-11-29 20:59:50.249 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5271/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-29 20:59:50.280 -05:00 [DBG] Connection id "0HMVH903LAGD4" completed keep alive response.
+2023-11-29 20:59:50.281 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5271/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 32.0695ms
+2023-11-29 20:59:50.481 -05:00 [DBG] Connection id "0HMVH903LAGD5" completed keep alive response.
+2023-11-29 20:59:50.482 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5271/_vs/browserLink - 200 null text/javascript; charset=UTF-8 239.3747ms
+2023-11-29 20:59:50.682 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5271/swagger/v1/swagger.json - null null
+2023-11-29 20:59:50.683 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-29 20:59:50.683 -05:00 [DBG] Request did not match any endpoints
+2023-11-29 20:59:51.163 -05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 479.3899 ms
+2023-11-29 20:59:51.164 -05:00 [DBG] Connection id "0HMVH903LAGD5" completed keep alive response.
+2023-11-29 20:59:51.165 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5271/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 482.9337ms
+2023-11-29 20:59:56.376 -05:00 [DBG] Connection id "0HMVH903LAGD6" accepted.
+2023-11-29 20:59:56.376 -05:00 [DBG] Connection id "0HMVH903LAGD6" received FIN.
+2023-11-29 20:59:56.376 -05:00 [DBG] Connection id "0HMVH903LAGD6" started.
+2023-11-29 20:59:56.378 -05:00 [DBG] Connection id "0HMVH903LAGD6" disconnecting.
+2023-11-29 20:59:56.378 -05:00 [DBG] Connection id "0HMVH903LAGD7" accepted.
+2023-11-29 20:59:56.378 -05:00 [DBG] Connection id "0HMVH903LAGD7" started.
+2023-11-29 20:59:56.378 -05:00 [DBG] Connection id "0HMVH903LAGD6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-29 20:59:56.379 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5271/api/Functions/Lista - null null
+2023-11-29 20:59:56.389 -05:00 [DBG] Connection id "0HMVH903LAGD6" stopped.
+2023-11-29 20:59:56.404 -05:00 [DBG] 1 candidate(s) found for the request path '/api/Functions/Lista'
+2023-11-29 20:59:56.412 -05:00 [DBG] Endpoint 'JoseLuisValderruten.Controllers.FunctionsController.Listar (JoseLuisValderruten)' with route pattern 'api/Functions/Lista' is valid for the request path '/api/Functions/Lista'
+2023-11-29 20:59:56.416 -05:00 [DBG] Request matched endpoint 'JoseLuisValderruten.Controllers.FunctionsController.Listar (JoseLuisValderruten)'
+2023-11-29 20:59:56.438 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-29 20:59:56.933 -05:00 [DBG] Successfully validated the token.
+2023-11-29 20:59:56.936 -05:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2023-11-29 20:59:56.955 -05:00 [DBG] Authorization was successful.
+2023-11-29 20:59:56.972 -05:00 [INF] Executing endpoint 'JoseLuisValderruten.Controllers.FunctionsController.Listar (JoseLuisValderruten)'
+2023-11-29 20:59:57.058 -05:00 [INF] Route matched with {action = "Listar", controller = "Functions"}. Executing controller action with signature System.Collections.Generic.List`1[JoseLuisValderruten.Model.RespuestaApi] Listar() on controller JoseLuisValderruten.Controllers.FunctionsController (JoseLuisValderruten).
+2023-11-29 20:59:57.061 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-29 20:59:57.062 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-29 20:59:57.062 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-29 20:59:57.066 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-29 20:59:57.067 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-29 20:59:57.073 -05:00 [DBG] Executing controller factory for controller JoseLuisValderruten.Controllers.FunctionsController (JoseLuisValderruten)
+2023-11-29 20:59:57.077 -05:00 [DBG] Executed controller factory for controller JoseLuisValderruten.Controllers.FunctionsController (JoseLuisValderruten)
+2023-11-29 20:59:57.126 -05:00 [DBG] comenzando a listar deportistas
+2023-11-29 20:59:58.211 -05:00 [DBG] Se listan correctamente.
+2023-11-29 20:59:58.222 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-29 20:59:58.226 -05:00 [DBG] No information found on request to perform content negotiation.
+2023-11-29 20:59:58.226 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-29 20:59:58.227 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-29 20:59:58.232 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-29 20:59:58.234 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[JoseLuisValderruten.Model.RespuestaApi, JoseLuisValderruten, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-29 20:59:58.270 -05:00 [INF] Executed action JoseLuisValderruten.Controllers.FunctionsController.Listar (JoseLuisValderruten) in 1189.1323ms
+2023-11-29 20:59:58.271 -05:00 [INF] Executed endpoint 'JoseLuisValderruten.Controllers.FunctionsController.Listar (JoseLuisValderruten)'
+2023-11-29 20:59:58.271 -05:00 [INF] HTTP GET /api/Functions/Lista responded 200 in 1851.3413 ms
+2023-11-29 20:59:58.272 -05:00 [DBG] Connection id "0HMVH903LAGD7" completed keep alive response.
+2023-11-29 20:59:58.273 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5271/api/Functions/Lista - 200 null application/json; charset=utf-8 1894.0866ms
