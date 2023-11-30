@@ -5,7 +5,6 @@ namespace JoseLuisValderruten.Data
 {
     public class services:Iservices
     {
-        private static string _cadena;
         private readonly ILogger _log;
         private readonly DataContext Context;
 
@@ -13,7 +12,6 @@ namespace JoseLuisValderruten.Data
         public services(ILogger<services> log, DataContext _context)
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-            _cadena = builder.GetSection("ConnectionStrings:CadenaSql").Value;
             _log = log;
             Context = _context;
 
