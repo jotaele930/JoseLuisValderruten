@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Serilog;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,14 +16,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<Iservices,services>();
 
+
 builder.Host.UseSerilog((context, configuración) =>
     configuración.ReadFrom.Configuration(context.Configuration));
-
 
 
 builder.Configuration.AddJsonFile("appsettings.json");
 var secretKey = builder.Configuration.GetSection("settings").GetSection("Key").ToString();
 var keyBytes = Encoding.UTF8.GetBytes(secretKey);
+
+builder.Services.AddDbContext<DataContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSql")));
 
 builder.Services.AddAuthentication(config => {
 
