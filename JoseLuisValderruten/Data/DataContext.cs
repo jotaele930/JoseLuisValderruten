@@ -9,8 +9,9 @@ namespace JoseLuisValderruten.Data
         { 
         }
 
-        public DbSet<Deportistas> Deps { get; set; }
-        public DbSet<Modalidades> Mods { get; set; }
+        public DbSet<Deportistas> Deportistas { get; set; }
+        public DbSet<Envion> Envion { get; set; }
+        public DbSet<Arranque> Arranque { get; set; }
 
 
     }

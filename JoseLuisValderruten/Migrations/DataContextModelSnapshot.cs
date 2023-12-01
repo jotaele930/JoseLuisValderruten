@@ -21,6 +21,25 @@ namespace JoseLuisValderruten.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("JoseLuisValderruten.Model.Arranque", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdDeportista")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PesoArranque")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Arranque");
+                });
+
             modelBuilder.Entity("JoseLuisValderruten.Model.Deportistas", b =>
                 {
                     b.Property<int>("Id")
@@ -39,10 +58,10 @@ namespace JoseLuisValderruten.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Deps");
+                    b.ToTable("Deportistas");
                 });
 
-            modelBuilder.Entity("JoseLuisValderruten.Model.Modalidades", b =>
+            modelBuilder.Entity("JoseLuisValderruten.Model.Envion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,21 +69,15 @@ namespace JoseLuisValderruten.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Arranque")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Envion")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdDeportista")
                         .HasColumnType("int");
 
-                    b.Property<int>("Peso")
+                    b.Property<int>("PesoEnvion")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Mods");
+                    b.ToTable("Envion");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,7 @@
 ﻿using JoseLuisValderruten.Model;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace JoseLuisValderruten.Data
 {
@@ -27,10 +29,11 @@ namespace JoseLuisValderruten.Data
             try
             {
 
-                lista = (from d in Context.Deps
-                              join m in Context.Mods on d.Id equals m.IdDeportista
-                              where m.Peso == (Context.Mods.Where(z => z.IdDeportista == d.Id).Max(y => y.Peso))
-                              select new RespuestaApi { Pais = d.Pais, Nombre = d.Nombre, Peso = m.Peso, Envion = m.Envion, Arranque = m.Arranque }).OrderByDescending(a => a.Peso).ToList();
+                lista = (from d in Context.Deportistas
+                         join e in Context.Envion on d.Id equals e.IdDeportista
+                         join a in Context.Arranque on d.Id equals a.IdDeportista
+                         where e.PesoEnvion == (Context.Envion.Where(z => z.IdDeportista == d.Id).Max(y => y.PesoEnvion)) && a.PesoArranque == (Context.Arranque.Where(z => z.IdDeportista == d.Id).Max(y => y.PesoArranque))
+                         select new RespuestaApi { Pais = d.Pais, Nombre = d.Nombre, Peso = e.PesoEnvion + a.PesoArranque, Envion = e.PesoEnvion, Arranque = a.PesoArranque }).OrderByDescending(a => a.Peso).ToList();
 
                 _log.LogDebug("Se listan los deportistas correctamente.");
                 return lista;
@@ -53,10 +56,21 @@ namespace JoseLuisValderruten.Data
             try
             {
 
-                lista = (from d in Context.Deps
-                              join m in Context.Mods on d.Id equals m.IdDeportista
-                              group d by d.Nombre into cont
-                              select new Intentos { Nombre = cont.Key, IntentosDeportista = cont.Count() }).ToList();
+                var deportistas = (from d in Context.Deportistas select new { Id = d.Id, Nombre = d.Nombre }).ToList();
+
+                foreach (var item in deportistas)
+                {
+                    int intEnvion = (from e in Context.Envion
+                                    where e.IdDeportista == item.Id
+                                    select e.Id).Count();
+
+                    int intArranque = (from a in Context.Arranque
+                                     where a.IdDeportista == item.Id
+                                     select a.Id).Count();
+
+                    lista.Add(new Intentos { Nombre = item.Nombre, IntentosArranque = intArranque, IntentosEnvion=intEnvion }); 
+                }
+
 
                 _log.LogDebug("Se listan los intentos correctamente.");
                 return lista;

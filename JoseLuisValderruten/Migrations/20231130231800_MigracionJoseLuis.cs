@@ -5,13 +5,27 @@
 namespace JoseLuisValderruten.Migrations
 {
     /// <inheritdoc />
-    public partial class MigracionJose : Migration
+    public partial class MigracionJoseLuis : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Deps",
+                name: "Arranque",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdDeportista = table.Column<int>(type: "int", nullable: false),
+                    PesoArranque = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Arranque", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Deportistas",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -21,23 +35,21 @@ namespace JoseLuisValderruten.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Deps", x => x.Id);
+                    table.PrimaryKey("PK_Deportistas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Mods",
+                name: "Envion",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdDeportista = table.Column<int>(type: "int", nullable: false),
-                    Arranque = table.Column<int>(type: "int", nullable: false),
-                    Envion = table.Column<int>(type: "int", nullable: false),
-                    Peso = table.Column<int>(type: "int", nullable: false)
+                    PesoEnvion = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Mods", x => x.Id);
+                    table.PrimaryKey("PK_Envion", x => x.Id);
                 });
         }
 
@@ -45,10 +57,13 @@ namespace JoseLuisValderruten.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Deps");
+                name: "Arranque");
 
             migrationBuilder.DropTable(
-                name: "Mods");
+                name: "Deportistas");
+
+            migrationBuilder.DropTable(
+                name: "Envion");
         }
     }
 }

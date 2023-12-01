@@ -12,6 +12,7 @@
     public class Intentos
     {
         public string Nombre { get; set; }
-        public int IntentosDeportista { get; set; }
+        public int IntentosEnvion { get; set; }
+        public int IntentosArranque { get; set; }
     }
 }
