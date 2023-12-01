@@ -4,7 +4,9 @@ namespace JoseLuisValderruten.Data
 {
     public interface Iservices
     {
-        List<RespuestaApi> ListarDeportistas();
+        List<RespuestaApi> ListarResultadosDep();
         List<Intentos> ListarIntentos();
+        List<Deportistas> ListarDeportistas();
+        string RegistrarDatos(Registros datos);
     }
 }

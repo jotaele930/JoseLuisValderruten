@@ -15,4 +15,12 @@
         public int IntentosEnvion { get; set; }
         public int IntentosArranque { get; set; }
     }
+
+    public class Registros
+    {
+        public int IdDeportista { get; set; }
+        public string Modalidad { get; set;}
+        public int Peso { get; set;}
+        
+    }
 }

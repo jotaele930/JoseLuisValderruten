@@ -20,12 +20,27 @@ namespace JoseLuisValderruten.Controllers
             Services = _services;
         }
 
+        [HttpPost]
+        [Route("InsertarRegistros")]
+        public string Registrar([FromBody]Registros datos)
+        {
+            return Services.RegistrarDatos(datos);
+        }
+
 
         [HttpGet]
-        [Route("Lista")]
-        public List<RespuestaApi> Listar()
+        [Route("ListaDeportistas")]
+        public List<Deportistas> ListarDeportistas()
         {
-            return Services.ListarDeportistas(); 
+            return Services.ListarDeportistas();
+        }
+
+
+        [HttpGet]
+        [Route("ListaResultados")]
+        public List<RespuestaApi> ListarResultados()
+        {
+            return Services.ListarResultadosDep(); 
         }
 
         [HttpGet]
