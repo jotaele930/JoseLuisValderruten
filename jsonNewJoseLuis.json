@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "d30a2ec9-5bb7-4020-a284-ad339fff7934",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1817770"
+	},
+	"item": [
+		{
+			"name": "getIntentos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getListarResultados",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"jose\",\r\n  \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5271/api/Auth/Validar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5271",
+					"path": [
+						"api",
+						"Auth",
+						"Validar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListarDeportistas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarRegistros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJqb3NlIiwibmJmIjoxNzAxNDY0MjgzLCJleHAiOjE3MDE0NjQ1ODMsImlhdCI6MTcwMTQ2NDI4M30.vj4mHW6RGaeFd4l-QAzV-deeWZL3wXOL9NJYDTfUbW0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"IdDeportista\": 1,\r\n  \"Modalidad\": \"arranque\", //envion o arranque\r\n  \"Peso\":225\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5271/api/Functions/InsertarRegistros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5271",
+					"path": [
+						"api",
+						"Functions",
+						"InsertarRegistros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
